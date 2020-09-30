@@ -5,14 +5,14 @@ services:
     volumes:
       - type: volume
         source: java-war
-        target: /root/boxfuse-sample-master/target
+        target: /root/boxfuse-sample/target
   production:
     image: tomcat:9.0-jdk14
     volumes:
       - type: volume
         source: java-war
-        target: /root/boxfuse-sample-master/target
-    command: cp /root/boxfuse-sample/target-master/hello-1.0.war /usr/local/tomcat/webapps/ROOT.war
+        target: /root/boxfuse-sample/target
+    command: cp /root/boxfuse-sample/target/hello-1.0.war /usr/local/tomcat/webapps/ROOT.war
     depends_on:
       - compiler
 volumes:
