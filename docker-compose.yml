@@ -7,7 +7,7 @@ services:
         source: java-war
         target: /root/boxfuse-sample/target
   production:
-    image: tomcat:9.0.20-jre8-alpine
+    image: tomcat:9.0-jdk14
     volumes:
       - type: volume
         source: java-war
