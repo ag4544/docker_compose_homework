@@ -3,7 +3,7 @@ services:
   compiler:
     build: mvncompiler
     volumes:
-      - ./target:/root/boxfuse-sample/target/
+      - ./target:/root/boxfuse-sample/target
   production:
     image: tomcat:9.0.20-jre8-alpine
     volumes_from:
