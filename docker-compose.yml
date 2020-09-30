@@ -6,7 +6,7 @@ services:
       - ./target:/root/boxfuse-sample/target/
   production:
     image: tomcat:9.0.20-jre8-alpine
-    volumes:
-      - ./target/hello-1.0.war:/usr/local/tomcat/webapps/ROOT.war
+    volumes_from:
+      - compiler
     depends_on:
       - compiler
