@@ -6,6 +6,8 @@ services:
       - type: volume
         source: java-war
         target: /root/result/
+    ports:
+      - "8080:8080"
   production:
     image: tomcat:9.0-jdk14
     volumes:
