@@ -6,14 +6,14 @@ services:
       - type: volume
         source: java-war
         target: /root/result/
-    ports:
-      - "8080:8080"
   production:
     image: tomcat:9.0-jdk14
     volumes:
       - type: volume
         source: java-war
         target: /usr/local/tomcat/webapps/
+    ports:
+      - "8080:8080"
     depends_on:
       - compiler
 volumes:
